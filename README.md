@@ -33,4 +33,6 @@ Here is step-by-step instruction:
 1.That's it you've done it!
 > Please notice, this software heve been tested on the CentOS 7 (x64) on free, shared hosting.
 #### Performance:
-> Average script execution time is ```172ms```
+> Average script execution time is ```172ms``` (index page)
+> ```94ms``` (post page)
+> ```118ms``` (comment, upload, delete post)
