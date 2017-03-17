@@ -17,9 +17,9 @@ foreach($posts as &$post) {
 if($post['uid'] == $postid) {
 $key=array_search($post, $posts);
 unset($postf["Posts"][$key]);
-file_put_contents("posts.json", json_encode($postf));
+/*file_put_contents("posts.json", json_encode($postf));
 header("HTTP/1.1 307 Internal Redirect");
-header("Location: /");
+header("Location: /"); */
 }
 }
 } else {
