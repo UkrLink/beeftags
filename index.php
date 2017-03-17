@@ -1,14 +1,13 @@
 <?php
-if($_SERVER['SERVER_PORT']  == 443) {
 	if($_GET['layout'] == 'random') { echo http_get("/rand.php"); die();}
 $submit = '<form enctype="multipart/form-data" action="submit.php" method="POST"></input><input type="file" name="pic" multiple accept="image/*"></input><p>You will be asked to provide post title on the next step</p><input type="submit" value="Submit!" id="submit_confirm"></input></form><br>';
 $login = "<div style=\"background-color: rgb(97, 92, 150); padding: 1em;\" align=\"center\"><form action=\"login.php\" method=\"POST\"><input type=\"text\" name=\"nickname\">&nbsp;</input><input type=\"password\" name=\"pass\"></input>&nbsp;<input type=\"submit\" value=\"Login!\"></input><p>Don't have an account yet? <a href='login.php?reg=true'>Register!</p></a></form></div>";
 $page = 1;
 if(isset($_GET['p'])) {
-define("page", $_GET['p']);
+define("PAGE", $_GET['p']);
 }
-$limit 15;
-$offset =page*15-15;
+$limit = 15;
+$offset =PAGE*15-15;
 if($_COOKIE['ecm_usr'] == "admin") {
 $tools = true;
 }
@@ -38,7 +37,7 @@ $posts = $postlist['Posts'];
 if(!isset($_GET['query'])) {
 foreach($posts as &$post) {
 	if($offset>0) {
-		$offset--;
+	$offset--;
 	} else {
 	$limit--;
 	if($limit > 0) {
@@ -63,9 +62,5 @@ if(strpos(implode("_",$post['tags']), $_GET['query']) === false) {
     $pagemiddle = $pagemiddle . $payload;
     }
     }
-}
-echo("$pagestart . $pagemiddle . $pageend");
-} else {
-header("500 SSL Use");
-}
+	echo("$pagestart . $pagemiddle . $pageend");
 ?>
