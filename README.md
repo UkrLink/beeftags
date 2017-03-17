@@ -23,14 +23,21 @@ Can be seen on http://beeftags.rf.gd/
 # Install:
 You can download a release as zip than unzip it at server. You have two ways, but now only one is suuported.
 Here is step-by-step instruction:
-## Direct way:
-1. Download release
+## Install:
+1. Download binary (zip release)
+1. Upload to your server
+1. Unzip it
+1. Login to admin (password = admin)
+1. Login to /control and edit settings
+1. That's it you've done it!
+## Direct way (not recommended):
+1. Download source
 1. Upload to your server
 1. Unzip it
 1. Edit the ```passwords.db``` if nescessary, by default admin password is ```admin```
 1. Login to admin
 1. Login to /control and edit settings
-1.That's it you've done it!
+1. That's it you've done it!
 > Please notice, this software heve been tested on the CentOS 7 (x64) on free, shared hosting.
 #### Performance:
 > Average script execution time is ```172ms``` (index page)
