@@ -5,10 +5,10 @@ $submit = '<form enctype="multipart/form-data" action="submit.php" method="POST"
 $login = "<div style=\"background-color: rgb(97, 92, 150); padding: 1em;\" align=\"center\"><form action=\"login.php\" method=\"POST\"><input type=\"text\" name=\"nickname\">&nbsp;</input><input type=\"password\" name=\"pass\"></input>&nbsp;<input type=\"submit\" value=\"Login!\"></input><p>Don't have an account yet? <a href='login.php?reg=true'>Register!</p></a></form></div>";
 $page = 1;
 if(isset($_GET['p'])) {
-$page = $_GET['p'];
+define("page", $_GET['p']);
 }
-$total = $page*15;
-$miss = $total - 15;
+$limit 15;
+$offset =page*15-15;
 if($_COOKIE['ecm_usr'] == "admin") {
 $tools = true;
 }
@@ -37,37 +37,22 @@ $post_uid = 0;
 $posts = $postlist['Posts'];
 if(!isset($_GET['query'])) {
 foreach($posts as &$post) {
-    $post_uid++;
-	$miss--;
-	$total--;
-	if($miss > 0) {
-	if($post_uid > $miss && $miss > 0 && $total > 0) {
+	if($offset>0) {
+		$offset--;
+	} else {
+	$limit--;
+	if($limit > 0) {
     if($tools) {$atools = "<a href='/submit.php?delete=true&uid=".$post["uid"]."' style='float: right; border: 1px darkred solid; padding: 3px; margin-right: 5vw; border-radius: 25px;'><img id='del' src='content/delete.jpg' /></a>";}
     $title = $post['Title'];
     $image = $post['Image'];
     $author = $post['Author'];
-	$del = $post['isDeleted'];
-	if(!$del) {
     $payload = "<div data-post='" . $post_uid . "' class='post'><h3 style='font-family: 'Rubik', sans-serif;'>" . $title . "</h3><br>".$atools."<a href='/post.php?post=".$post['uid']."' ><img src='" . $image . "' /></a><br><p><b>Author:</b><i>" . $author . "</i></div><hr>";
     $pagemiddle = $pagemiddle . $payload;
-	}
-	}
-	} else {
-	if($total > 0) {
-	if($tools) {$atools = "<a href='/submit.php?delete=true&uid=".$post["uid"]."' style='float: right; border: 1px darkred solid; padding: 3px; margin-right: 5vw; border-radius: 25px;'><img id='del' src='content/delete.jpg' /></a>";}
-    $title = $post['Title'];
-    $image = $post['Image'];
-    $author = $post['Author'];
-	$del = $post['isDeleted'];
-	if(!$del) {
-    $payload = "<div data-post='" . $post_uid . "' class='post'><h3 style='font-family: 'Rubik', sans-serif;'>" . $title . "</h3><br>".$atools."<a href='/post.php?post=".$post['uid']."' ><img src='" . $image . "' /></a><br><p><b>Author:</b><i>" . $author . "</i></div><hr>";
-    $pagemiddle = $pagemiddle . $payload;
-	}
 	}
 	}
 }
 } else {
-foreach($posts as &$post) {
+foreach($posts as &$post) 
 if(strpos(implode("_",$post['tags']), $_GET['query']) === false) {
     } else {
     $post_uid++;
