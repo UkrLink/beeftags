@@ -1,0 +1,46 @@
+body {
+margin: 0em !important; background-image: url(bi.png); background-size: 100%; background-attachment: fixed;background-color: #fff !important;
+}
+#lgsel {
+border: 1px darkgrey; border-radius:0 3px 0 3px; background-color: darkgrey; padding: 2px; position: fixed; top: 0px; right: 0px;
+}
+#submit_confirm {
+float: right;
+}
+#submit {
+background-color: rgb(116, 112, 167); padding: 4px;
+}
+#preview {
+float: right; border: black 2px; max-width: 80px;
+}
+#acc_manage {
+padding: 9px; background: buttonface; border: 2px groove white;
+}
+.search {
+background-color: #9B97CF; padding: 1px;
+}
+#logout {
+padding: 9px; background: buttonface; border: 2px groove;
+}
+.post {
+background: #fff;
+}
+@media only screen and (max-width: 550px) {
+body {
+bottom: 0px;
+}
+.top {
+position: sticky !important;
+width: 100vw !important;
+background-color: #fff !important; border: 1px double black !important; border-radius: 0 0 5em 5em; padding-bottom: 3em;
+}
+}
+@media only screen and (min-width: 551px) {
+.top {
+position: relative !important; width: 67vw !important; margin: 0 auto !important; background-color: #fff !important; border: 1px double black !important; border-radius: 0 0 5em 5em; padding-bottom: 3em;
+}
+}
+#mobile {
+display: none;
+}
+}
