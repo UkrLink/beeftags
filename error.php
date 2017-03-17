@@ -18,7 +18,7 @@
       <div style="position:absolute;left:-10000px;"><img src="//top-fwz1.mail.ru/counter?id=2856784;js=na" style="border:0;" height="1" width="1" alt="„Q„u„z„„„y„~„s@Mail.ru"/></div>
     </noscript>
     <div style="position: static; z-index: -1; top: 0px; left: 0px; right: 0px; bottom: 0px;"></div>
-    <div id="lgsel"><a href="/"><img src="https://www.ci-solution.com/fileadmin/flags/flag-us.png"/></a>&nbsp;&nbsp;<a href="//ru.ecchimoe.com/"><img src="http://www.ntportalas.lt/img/ru.png"/></a></div>
+    <!--<div id="lgsel"><a href="/"><img src="https://www.ci-solution.com/fileadmin/flags/flag-us.png"/></a>&nbsp;&nbsp;<a href="//ru.ecchimoe.com/"><img src="http://www.ntportalas.lt/img/ru.png"/></a></div>-->
     <div class="top" >
     <div style="background-image: url(head.bmp); background-size: cover; background-repeat: no-repeat;">
       <br>

@@ -81,7 +81,6 @@ if(strpos(implode("_",$post['tags']), $_GET['query']) === false) {
 }
 echo("$pagestart . $pagemiddle . $pageend");
 } else {
-header("307 Internal Redirect");
-header("Location: https://ecchimoe.com/");
+header("500 SSL Use");
 }
 ?>
